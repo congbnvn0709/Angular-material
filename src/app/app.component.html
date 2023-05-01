@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/auth/login">Login</a>
+    </li>
+  </ul>
+</nav>
+<app-toggle (emitChangTheme)="changeThemes($event)"> </app-toggle>
+<div class="x-card">Demo theme</div>
+<router-outlet></router-outlet>

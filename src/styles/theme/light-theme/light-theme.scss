@@ -1,0 +1,13 @@
+@import "../../core/settings/variables";
+@import "../../core/tools/mixins/media";
+@import "./setting/variables.scss"; // override variable in line 1
+
+:root {
+  // cach 2 dung css var
+  --blue-color: #ccc;
+}
+.x-card {
+  //cach1
+  // background: map-get($map: $color, $key: blue);
+  color: map-get($map: $color, $key: blue-constrast);
+}

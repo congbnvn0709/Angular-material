@@ -1,0 +1,12 @@
+@import "./styles/material-theme";
+@import "./styles/core/settings/variables";
+@import "./styles/core/tools/mixins/media";
+
+.x-card {
+  padding: 10px;
+  // background: map-get($map: $color, $key: blue);
+  //cach 2
+  background: var(--blue-color, map-get($map: $color, $key: blue));
+
+  color: map-get($map: $color, $key: blue-constrast);
+}

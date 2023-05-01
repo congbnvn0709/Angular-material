@@ -1,0 +1,27 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="submitform()"
+  style="position: absolute; left: 50%; right: 50%"
+>
+  <div class="form-control-wraper">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="text" matInput formControlName="email" />
+      <mat-error>ssssssss</mat-error>
+      <!-- <mat-error
+        [control]="form.controls['email']"
+        [controlName]="'Email'"
+      ></mat-error> -->
+    </mat-form-field>
+  </div>
+  <div class="form-control-wraper">
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password" />
+    </mat-form-field>
+  </div>
+  <div class="form-control-wraper">
+    <button mat-raised-button type="submit">Login</button>
+  </div>
+</form>
+<!-- <mat-error>Email is required</mat-error> -->

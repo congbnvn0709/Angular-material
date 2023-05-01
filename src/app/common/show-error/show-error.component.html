@@ -1,0 +1,9 @@
+<ng-container
+  *ngIf="control && control.invalid && (control.dirty || control.touched)"
+>
+  <ng-container [ngSwitch]="keyError">
+    <ng-container *ngSwitchCase="'required'">
+      <mat-error>{{ controlName }} is required</mat-error>
+    </ng-container>
+  </ng-container>
+</ng-container>
