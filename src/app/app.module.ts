@@ -5,8 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Routes } from '@angular/router';
 import { ToggleModule } from './components/toggle/toggle.module';
+import {ColorThemeModule} from "./components/color-theme/color-theme.module";
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { ToggleModule } from './components/toggle/toggle.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     ToggleModule,
-    ButtonModule
+    ButtonModule,
+    ColorThemeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
