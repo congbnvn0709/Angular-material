@@ -7,4 +7,12 @@
 </nav>
 <app-toggle (emitChangTheme)="changeThemes($event)"> </app-toggle>
 <div class="x-card">Demo theme</div>
+<span
+  >--------------------------------------------------------------------------------------------------</span
+>
+<app-button></app-button>
+<app-toggle
+  text="Toggle theme runtime"
+  (emitChangTheme)="changeThemeRunTime($event)"
+></app-toggle>
 <router-outlet></router-outlet>

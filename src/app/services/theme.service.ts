@@ -20,13 +20,26 @@ export class ThemeService {
     this.attactTheme(theme);
   }
   attactTheme(theme: Theme) {
-    const url = `${theme}-theme.css`;
-    const link = this.doc.createElement('link') as HTMLLinkElement;
-    link.href = url;
-    link.rel = 'styleSheet';
-    link.className = 'theme-app';
-    const head = this.doc.querySelector('head');
-    head?.appendChild(link);
+    // cách 1;
+    // const url = `${theme}-theme.css`;
+    // const link = this.doc.createElement('link') as HTMLLinkElement;
+    // link.href = url;
+    // link.rel = 'styleSheet';
+    // link.className = 'theme-app';
+    // const head = this.doc.querySelector('head');
+    // head?.appendChild(link);
+    //cách 2: using preload
+    const url = `${theme}`;
+    const themes = Array.from(this.doc.querySelectorAll('.app-theme-available')) as HTMLLinkElement[];
+    const themeLinks = themes.filter(item => item.href.includes(url));
+    if (themeLinks) {
+      const link = themeLinks[0].cloneNode(true) as HTMLLinkElement;
+      link.className = 'theme-app';
+      link.rel = 'styleSheet';
+      link.removeAttribute('as');
+      const head = this.doc.querySelector('head');
+      head?.appendChild(link);
+    }
   }
   storageTheme(theme: Theme) {
     localStorage.setItem('appTheme', theme);

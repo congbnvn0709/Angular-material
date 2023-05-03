@@ -1,3 +1,4 @@
+import { ButtonModule } from './components/button/button.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,7 +17,8 @@ import { ToggleModule } from './components/toggle/toggle.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ToggleModule
+    ToggleModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

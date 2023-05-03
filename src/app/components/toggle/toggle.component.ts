@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
@@ -10,6 +10,7 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 export class ToggleComponent implements OnInit {
   checked = true;
   disabled = false;
+  @Input() text = 'Toggle theme!'
   @Output() emitChangTheme = new EventEmitter();
   constructor() { }
 
