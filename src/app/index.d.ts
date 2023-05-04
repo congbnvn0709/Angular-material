@@ -1,2 +1,1 @@
-import * as tinycolor from "tinycolor2";
-export default tinycolor;
+// export * as tinycolor from "tinycolor2";
