@@ -1,0 +1,6 @@
+<form #f="ngForm" (ngSubmit)="submitColor(f)">
+  <input type="color" [(ngModel)]="colorSelect.primary" name="primary">
+  <input type="color" [(ngModel)]="colorSelect.accent" name="accent">
+  <input type="color" [(ngModel)]="colorSelect.warn" name="warn">
+  <button type="submit" >Submit color</button>
+</form>

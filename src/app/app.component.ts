@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
-import { ThemeService } from './services/theme.service';
 import { DOCUMENT } from '@angular/common';
+import { ThemeService } from './services/theme-service.service';
 
 @Component({
   selector: 'app-root',
