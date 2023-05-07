@@ -6,12 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToggleModule } from './components/toggle/toggle.module';
-import {ColorThemeModule} from "./components/color-theme/color-theme.module";
+import {ColorPickerModule} from "./components/color-picker/color-picker.module";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +19,7 @@ import {ColorThemeModule} from "./components/color-theme/color-theme.module";
     BrowserAnimationsModule,
     ToggleModule,
     ButtonModule,
-    ColorThemeModule
+    ColorPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
